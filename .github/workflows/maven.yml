@@ -21,6 +21,9 @@ jobs:
     
     - name: Build common library
       run: mvn clean install -f api-lib-bpt-common-artifact/pom.xml
+
+    - name: Create logs directory
+      run: mkdir -p logs
     
     - name: Build and test customer-person service
       run: mvn clean package -f api-msa-bpt-customer-person/pom.xml
