@@ -1,0 +1,3 @@
+# Project exclude paths
+/api-msa-bpt-account-movements/target/
+/api-msa-bpt-customer-person/target/
