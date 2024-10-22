@@ -1,0 +1,74 @@
+spring:
+  application:
+    name: @project.artifactId@
+    version: @project.version@
+    description: @project.description@
+    log: ${APP_LOG_ROOT:/logs}
+  webflux:
+    base-path: ${ENV_MICROSERVICE_PATH:/api-msa-customer-person/v1}
+  messages:
+    encoding: UTF-8
+  version: 2.7.1
+  main:
+    banner-mode: log
+    lazy-initialization: false
+  mvc:
+    converters:
+      preferred-json-mapper: jsonb
+  r2dbc:
+    url: ${ENV_MICROSERVICE_DATASOURCE:r2dbc:postgresql://localhost:5432/test_db}
+    username: ${ENV_MICROSERVICE_DATASOURCE_USERNAME:postgres}
+    password: ${ENV_MICROSERVICE_DATASOURCE_PASSWORD:root}
+  flyway:
+    user: ${ENV_MICROSERVICE_DATASOURCE_USERNAME:postgres}
+    password: ${ENV_MICROSERVICE_DATASOURCE_PASSWORD:root}
+    url: ${ENV_MICROSERVICE_FLYWAY_DATASOURCE:jdbc:postgresql://localhost:5432/test_db}
+    enabled: true
+
+flyway:
+  datasources:
+    default:
+      enabled: true
+jpa:
+  default:
+    reactive: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create-drop
+        show_sql: true
+        connection:
+          url: ${ENV_MICROSERVICE_JPA_DATASOURCE:jdbc:postgresql://localhost:5432/test_db}
+          username: myUser
+          password: myPassword
+
+server:
+  port: ${ENV_MICROSERVICE_PORT:8001}
+  compression:
+    enabled: true
+  tomcat:
+    uri-encoding: UTF-8
+  error:
+    include-stacktrace: never
+
+logging:
+  level:
+    root: ${ENV_MICROSERVICE_LOG_LEVEL:INFO}
+
+
+management:
+  info:
+    git:
+      enabled: true
+      mode: full
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    db:
+      enabled: false
+
+microservice:
+  configuration:
+    uuid: ${ENV_MICROSERVICE_CONFIGURATION_COMPONENT_UUID:3adecaeb-1b27-45c7-b8d0-8ee29d030987}

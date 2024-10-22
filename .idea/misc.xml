@@ -7,6 +7,9 @@
         <option value="$PROJECT_DIR$/api-msa-bpt-customer-person/pom.xml" />
         <option value="$PROJECT_DIR$/api-msa-bpt-account-movements/pom.xml" />
         <option value="$PROJECT_DIR$/api-lib-bpt-common-artifact/pom.xml" />
+        <option value="$PROJECT_DIR$/api-lib-common-artifact/pom.xml" />
+        <option value="$PROJECT_DIR$/api-msa-account-movements/pom.xml" />
+        <option value="$PROJECT_DIR$/api-msa-customer-person/pom.xml" />
       </list>
     </option>
   </component>

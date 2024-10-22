@@ -4,7 +4,7 @@ services:
   customer-person:
     build:
       context: .
-      dockerfile: api-msa-bpt-customer-person/Dockerfile
+      dockerfile: api-msa-customer-person/Dockerfile
     ports:
       - "8001:8001"
     environment:
@@ -19,7 +19,7 @@ services:
   account-movements:
     build:
       context: .
-      dockerfile: api-msa-bpt-account-movements/Dockerfile
+      dockerfile: api-msa-account-movements/Dockerfile
     ports:
       - "8002:8002"
     environment:

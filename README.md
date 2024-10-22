@@ -1,12 +1,12 @@
 # API MSA Assessment
 
-Este proyecto contiene dos microservicios Spring Boot: `api-msa-bpt-customer-person` y `api-msa-bpt-account-movements`. Ambos utilizan una base de datos PostgreSQL y están configurados para ejecutarse en contenedores Docker.
+Este proyecto contiene dos microservicios Spring Boot: `api-msa-customer-person` y `api-msa-account-movements`. Ambos utilizan una base de datos PostgreSQL y están configurados para ejecutarse en contenedores Docker.
 
 ## Estructura del Proyecto
 
-- `api-msa-bpt-customer-person`: Microservicio para gestionar información de clientes.
-- `api-msa-bpt-account-movements`: Microservicio para gestionar movimientos de cuentas.
-- `api-lib-bpt-common-artifact`: Librería común utilizada por ambos microservicios.
+- `api-msa-customer-person`: Microservicio para gestionar información de clientes.
+- `api-msa-account-movements`: Microservicio para gestionar movimientos de cuentas.
+- `api-lib-common-artifact`: Librería común utilizada por ambos microservicios.
 
 ## Tecnologías Utilizadas
 
