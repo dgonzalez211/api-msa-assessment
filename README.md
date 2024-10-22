@@ -1,4 +1,4 @@
-# API MSA BPT Pichincha Assessment
+# API MSA Assessment
 
 Este proyecto contiene dos microservicios Spring Boot: `api-msa-bpt-customer-person` y `api-msa-bpt-account-movements`. Ambos utilizan una base de datos PostgreSQL y están configurados para ejecutarse en contenedores Docker.
 
